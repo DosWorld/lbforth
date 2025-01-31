@@ -9,10 +9,6 @@ lbfd.exe: lbforth.c
         wcl386 -dBITS32 -bcl=causeway lbforth.c -fe=lbfd.exe
         upx -9 lbfd.exe
 
-lbfw.exe: lbforth.c
-        wcl386 -dBITS32 -bt=win32 -l=win32 lbforth.c -fe=lbfw.exe
-        upx -9 lbfw.exe
-
 install: all
         copy lbf.exe ..\BIN\
         copy lbfd.exe ..\BIN\
