@@ -1,4 +1,4 @@
-all: lbf.exe lbfd.exe lbfw.exe
+all: lbf.exe lbfd.exe
 
 lbf.exe: lbforth.c
         wcl -ms lbforth.c -fe=lbf.exe
@@ -12,7 +12,6 @@ lbfd.exe: lbforth.c
 install: all
         copy lbf.exe ..\BIN\
         copy lbfd.exe ..\BIN\
-        copy lbfw.exe ..\BIN\
 clean:
         del *.obj
         del *.exe
